@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://cdn.glitch.global/b39e794e-3a29-42a3-9fc5-bf4b4da07c1f/Thumbnail?v=1674516199648" />
+    <link href="https://fonts.googleapis.com/css?family=Encode Sans" rel="stylesheet">
+
+    <title>Music Maker</title>
+
+    <!-- Import the webpage's stylesheet -->
+    <script src="https://kihtrak.com/cloud_variable/cloudify.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://releases.jquery.com/git/ui/jquery-ui-git.js"></script>
+    <script src="./developer/circumvent.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <br><br><br>
+    <div style="display: flex">
+      <div class="playBtn" onclick="checkPlaySong()" title="Play"></div>
+      <div class="playBtn" onclick="stopSong()" style="background-image: url(https://cdn.glitch.global/b39e794e-3a29-42a3-9fc5-bf4b4da07c1f/f642141e-0873-48b8-b886-970e4aef460a.image.png?v=1674846763290)" title="Stop"></div>
+      <div class="tempoBox">Tempo (Speed): <input id="tempo" type="range" min="60" max="110" value="80"></div>
+    </div>
+    
+    <div id="selectNoteLengthHoverBox"></div>
+    
+    <div id="musicBar1" style="margin-top: 10px">
+      <img class="neutralClef" src="https://cdn.glitch.global/b39e794e-3a29-42a3-9fc5-bf4b4da07c1f/61adf253-0fa8-4bb5-a51e-555983e23d08.image.png?v=1674498604737">
+      <img class="timeSig" src="https://cdn.glitch.global/b39e794e-3a29-42a3-9fc5-bf4b4da07c1f/575-5754577_file-timesignature4-4-4-time-signature-clipart-png.png?v=1674597794437">
+    </div>
+    <div id="musicBar2"></div>
+    
+  </body>
+</html>

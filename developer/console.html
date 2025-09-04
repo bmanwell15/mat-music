@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://cdn.glitch.global/b39e794e-3a29-42a3-9fc5-bf4b4da07c1f/Thumbnail?v=1674516199648" />
+    <link href="https://fonts.googleapis.com/css?family=Cutive Mono" rel="stylesheet">
+    
+    <title>Console - Music Maker</title>
+    
+    <!-- Import the webpage's stylesheet -->
+    <script src="https://kihtrak.com/cloud_variable/cloudify.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://releases.jquery.com/git/ui/jquery-ui-git.js"></script>
+    <script src="https://circumvent.glitch.me/library/1.3/circumvent.js"></script>
+    <link rel="stylesheet" href="/style.css" />
+    
+    <style>
+      body {font-family: Cutive Mono}
+      
+      button {
+        margin-left: calc(50% - 95px);
+        width: 200px;
+        height: 100px;
+        background-color: rgba(255,0,0,0.3);
+        font-size: 40px;
+        cursor: pointer;
+      }
+      button:hover {background-color: rgba(255,0,0,0.5)}
+      
+      #out, #time {
+        width: 100vw;
+        text-align: center;
+        font-size: 22px;
+      }
+    </style>
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <p id="out"></p>
+    <p id="time"></p>
+    <button onclick="setRefresh()">Refresh</button>
+    
+    <script>
+      var cloud_refresh = false, time = 0
+      function setRefresh() {
+        if (confirm("Are you sure you want to refresh the program on ALL computers?")) {
+          cloud_refresh = true
+          time = 10
+          setTimeout(() => {
+            cloud_refresh = false
+          }, 9000)
+        }
+      }
+      
+      setInterval(() => {
+        document.getElementById("out").innerHTML = "Refresh Status: " + cloud_refresh
+        document.getElementById("time").innerHTML = time <= 0 ? "" : "Refreshing.... <b>" + time + "s</b> left"
+        time--
+      }, 1000)
+    </script>
+  </body>
+</html>

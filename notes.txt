@@ -1,0 +1,15 @@
+  - Size               ----
+  - Color              Length of note (also label each note)
+  - Shape              Type of instrument
+  - position           Type of instrument
+
+
+  Bass - F, square
+  Snare - A, star
+  High-hat - C, triangle
+  Suscym - E, diamond
+  
+  
+  
+  
+  1. Add 4/4
